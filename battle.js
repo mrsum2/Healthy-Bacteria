@@ -11,8 +11,8 @@ document.getElementById("fightAI").addEventListener("click", function () {
     let playerHealing = playerInventory.reduce((sum, card) => sum + (card.hp || 0), 0);
 
     aiHealth -= playerAttack;
-    let resultText = aiHealth > 0 ? `You attacked the AI for ${playerAttack} damage! AI health: ${aiHealth}`
-                                  : "🔥 You defeated the AI! 🔥";
+    let resultText = aiHealth > 0 ? `🔥 You attacked the AI for ${playerAttack} damage! AI health: ${aiHealth}`
+                                  : "⚡ You destroyed the AI! ⚡";
 
     battleResult.innerHTML = `<p>${resultText}</p>`;
 });
